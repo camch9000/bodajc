@@ -1,0 +1,30 @@
+<div ng-switch on="bodaJC.control">
+    <!--Login-->
+    <div class="animate" ng-switch-when=1>
+        <h1 class="datosAzul"><a href="https://www.instagram.com/explore/tags/bodajc27/" target="_blank">&#35;BodaJC27</a></h1>
+        <span class="avatar">
+            <img class="img1" src="images/Logo_Pareja6.png" alt="Pareja_Boda"/>
+        </span> 
+        <form id="validarData" ng-controller="NoviosLoginController">
+            <div class="contentShow">
+                <div class="field">
+    <!--                <label>Usuario:</label>-->
+                    <input type="text" name="user" id="user" placeholder="Usuario" ng-model="credentials.username" />
+                </div>
+                <div class="field">
+    <!--                <label>Contraseña:</label>-->
+                    <input type="password" name="password" id="password" placeholder="Contraseña" ng-model="credentials.password" />
+                </div>
+            </div>
+            <ul class="actions4">
+                <li><a class="button" ng-click="login(credentials)">Ingresar</a></li>
+            </ul>
+        </form>
+        <div class="waitingMsg" ng-show="bodaJC.waiting == true">Por favor espere...</div>
+    </div>
+    
+    <!--Control-->
+    <div class="animate" ng-switch-when=2>
+        <div ng-include="'routes/NoviosConsultas.html'"></div>
+    </div>
+</div>

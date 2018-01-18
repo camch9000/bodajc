@@ -1,0 +1,21 @@
+<div class="animate" ng-switch-when=3>
+    <h1 class="datosAzul"><a href="https://www.instagram.com/explore/tags/bodajc27/" target="_blank">&#35;BodaJC27</a></h1>
+    <span class="avatar">
+        <img class="img1" src="images/Logo_Pareja3.png" alt="Pareja_Boda"/>
+    </span> 
+    <h1 id="noLink">No se ha detectado un codigo de invitado o el mismo no es valido, por favor ponerse en contacto con los novios.</h1> 
+    <div class="contentShow" ng-controller="noLink_Controller">
+        <div class="field">
+            <input type="text" name="cNombre" id="cNombre" placeholder="Nombre" ng-model="cNombre" />
+        </div>
+        <div class="field">
+            <input type="email" name="cEmail" id="cEmail" placeholder="Email" ng-model="cEmail" onfocusout="validaMail()" />
+        </div>
+        <div class="field">
+            <textarea name="cMessage" id="cMessage" placeholder="En que podemos ayudarte?" rows="4" ng-model="cMessage"></textarea>
+        </div>
+        <ul class="actions4">
+            <li><a class="button" ng-click="contactoEmail()">Enviar</a></li>
+        </ul>
+    </div>
+</div>

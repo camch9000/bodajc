@@ -1,0 +1,38 @@
+<span class="invitacionPage2">
+    <h1 class="lin">Con la bendición de <p class="color_color">Dios</p> y nuestros <p class="color_color">padres</p></h1>
+    <span class="padres">
+        <span class="padresNovia">
+            <h1 class="madre">Aileen Josefina Guzmán</h1>
+            <h1 class="padre">Julian Alberto Romero</h1>
+        </span>
+        <span class="padresNovio">
+            <h1 class="madre">María Milagros Chacín</h1>
+            <h1 class="padre">Carlos Ramón Matheus</h1>
+        </span>
+    </span>
+    <img class="img" src="images/Logo_Novios.png" alt="Novios_Boda"/>
+    <span class="mensajeInvitacion">
+        <h1 class="lin1">Nos uniremos mediante el sacramento del matrimonio</h1>
+        <h1 class="lin2">y nos complace invitarles a la <p class="color_color">CELEBRACIÓN RELIGIOSA</p></h1>
+        <h1 class="lin3">que tendrá lugar el próximo <p class="color_color">27 DE AGOSTO</p> a las <p class="color_color">9:20 AM</p>,</h1>
+        <h1 class="lin4">en la parroquia <p class="color_color">SANTO DOMINGO DE GUZMÁN</p></h1>
+        <h1 class="lin5">ubicada en la ciudad de Lecheria, Anzoátegui.</h1>
+        <h1 class="lin6">Luego estaremos celebrando nuesta unión en el salón</h1>
+        <h1 class="lin7"><p class="color_color">DIVERTT</p>, ubicado en el <p class="color_color">C.C PEÑON DEL FARO</p></h1>
+    </span>
+</span>
+<div ng-controller="link_confirmado" ng-switch on="bodaJC.bShow">
+    <div ng-switch-when=1>
+        <ul class="actions3" ng-controller="no_boda">
+            <li><a class="button" ng-click="noPuedo()">No Puedo</a></li>
+        </ul>
+        <ul class="actions2">
+            <li><a class="button" ng-click="bodaJC.page=3">Confirmar!</a></li>
+        </ul>
+    </div>
+    <div ng-switch-when=2>
+        <ul class="actions4" ng-controller="no_boda">
+            <li><a class="button" ng-click="bodaJC.page=3">Siguiente</a></li>
+        </ul>
+    </div>
+</div>

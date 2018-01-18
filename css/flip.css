@@ -1,0 +1,65 @@
+﻿#main {
+  position: relative;
+  height: auto;
+  min-height: 0px;
+  /* Flip card styles: WebKit, FF, Opera */
+  -webkit-perspective: 800px;
+     -moz-perspective: 800px;
+       -o-perspective: 800px;
+  -webkit-transform-style: preserve-3d;
+     -moz-transform-style: preserve-3d;
+       -o-transform-style: preserve-3d;
+  -webkit-transition: min-height 1s ease-out 0s, -webkit-transform 1s ease-out 0.5s;
+     -moz-transition: min-height 1s ease-out 0s, -moz-transform 1s ease-out 0.5s;
+       -o-transition: min-height 1s ease-out 0s, -o-transform 1s ease-out 0.5s;
+  /* only height adjustment for IE here */
+      -ms-transition: min-height 1s ease-out 0s;
+}
+ /* The class that flips the card: WebKit, FF, Opera */
+#main.card-flipped {
+  -webkit-transform: rotateY(180deg);
+     -moz-transform: rotateY(180deg);
+       -o-transform: rotateY(180deg);
+}
+#main .flipcard-front,
+#main .flipcard-back
+{
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* backface: all browsers */
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+          backface-visibility: hidden;
+  /* Flip card styles: IE 10,11 */
+  -ms-perspective: 800px;
+  -ms-transform-style: flat;
+  -ms-transition: -ms-transform 1s ease-out 0.5s;
+}
+#main .flipcard-front {
+  position: relative;
+  display: inline-block;
+  -webkit-transform: rotateY(0deg);
+      -ms-transform: rotateY(0deg);
+       -o-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+#main .flipcard-back 
+{
+  position: absolute;
+  display: none;
+      -ms-transform: rotateY(180deg);
+       -o-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  /*  webkit bug: https://bugs.webkit.org/show_bug.cgi?id=54371,
+      You need this fix if you have any input tags on your back face */
+  -webkit-transform: rotateY(180deg) translateZ(1px);
+}
+ /* The 2 classes that flip the faces instead of the card: IE 10,11 */
+#main .flipcard-front.ms-front-flipped {
+  -ms-transform: rotateY(180deg);
+}
+#main .flipcard-back.ms-back-flipped
+{
+  -ms-transform: rotateY(0deg);
+}

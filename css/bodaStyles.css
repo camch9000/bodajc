@@ -1,0 +1,269 @@
+@font-face
+{
+    font-family: 'Pupcat';
+    src: url(fonts/pupcat_rg.ttf);
+}
+
+.mensajePage
+{
+    font-family: "Pupcat";
+}
+    .mensajePage h1
+    {
+        color: white;
+        margin-bottom: -0.5em; 
+        font-size: 200%;
+    }
+    .mensajePage h2
+    {
+        color: #351f10;
+        font-size: 200%;
+        margin-bottom: 0em;
+    }
+    .mensajePage h3
+    {
+        color: #f42922;
+        font-size: 500%;
+        font-weight: bold; 
+        margin-top: -0.1em;
+        margin-bottom: 0em;
+    }
+
+.invitacionPage2
+{
+    font-family: "Pupcat";
+    margin-bottom: 50em;
+}
+    .invitacionPage2 p.color_color
+    {
+        color: #f42922;
+        display: inline;
+    }
+    .invitacionPage2 img
+    {
+        height: 10rem;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    .invitacionPage2 h1
+    {
+        padding: 0;
+        font-weight: bold;
+    }
+    .invitacionPage2 .padres
+    {
+        display: block;
+    }
+        .invitacionPage2 .padres .padresNovia
+        {
+            float: left;
+            font-size: 70%
+        }
+        .invitacionPage2 .padres .padresNovio
+        {
+            float: right;
+            font-size: 70%
+        }
+        .invitacionPage2 .padres h1
+        {
+            margin: -0.4em;    
+        }
+    .invitacionPage2 .mensajeInvitacion h1
+    {
+        margin: -0.3em; 
+    }
+    .invitacionPage2 .lin
+    {
+        font-size: 150%;        
+    }
+    .invitacionPage2 .lin1
+    {
+        font-size: 130%;
+    }
+    .invitacionPage2 .lin2
+    {
+        font-size: 100%;
+    }
+    .invitacionPage2 .lin3
+    {
+        font-size: 120%;
+    }
+    .invitacionPage2 .lin4
+    {
+        font-size: 170%;
+    }
+    .invitacionPage2 .lin5
+    {
+        font-size: 140%;
+    }
+    .invitacionPage2 .lin6
+    {
+        font-size: 120%;
+    }
+    .invitacionPage2 .lin7
+    {
+        font-size: 160%;
+    }
+
+.actions2, 
+.actions3
+{
+    list-style: none;
+    padding-top: 2em;
+    margin: 0;    
+}
+
+.actions2
+{
+    float: right;
+}
+
+.actions3
+{
+    float: left;
+    
+}
+
+.actions4
+{
+    list-style: none;
+    padding-top: 1em;
+    margin: 0;    
+}
+
+#validarData .contentShow h1:first-child
+{
+    font-size: 100%;
+}
+    #validarData .contentShow h1:first-child p.color_color
+    {
+        color: #f42922;
+        display: inline; 
+        font-size: 120%
+    }
+
+#validarData .contentShow #cant_adultos,
+#validarData .contentShow #cant_ninos
+{
+    display: inline-block;
+    padding: 1rem;
+}
+
+#main .animate #noLink
+{
+    font-size: 100%;
+}
+
+@media screen and (max-width: 600px)
+{
+        .invitacionPage2 .padres .padresNovia
+        {
+            font-size: 60%
+        }
+        .invitacionPage2 .padres .padresNovio
+        {
+            font-size: 60%
+        }
+    .invitacionPage2 img
+    {
+        height: 6rem;
+    }
+    .invitacionPage2 .mensajeInvitacion h1
+    {
+        margin: -0.4em; 
+    }
+    .invitacionPage2 .lin
+    {
+        font-size: 100%;        
+    }
+    .invitacionPage2 .lin1
+    {
+        font-size: 100%;
+    }
+    .invitacionPage2 .lin2
+    {
+        font-size: 90%;
+    }
+    .invitacionPage2 .lin3
+    {
+        font-size: 90%;
+    }
+    .invitacionPage2 .lin4
+    {
+        font-size: 120%;
+    }
+    .invitacionPage2 .lin5
+    {
+        font-size: 100%;
+    }
+    .invitacionPage2 .lin6
+    {
+        font-size: 90%;
+    }
+    .invitacionPage2 .lin7
+    {
+        font-size: 120%;
+    }
+    
+    .mensajePage h1
+    {
+        font-size: 150%;
+    }
+    .mensajePage h2
+    {
+        font-size: 150%;
+    }
+    .mensajePage h3
+    {
+        font-size: 300%;
+    }
+}
+
+@media screen and (max-width: 530px)
+{
+        .invitacionPage2 .padres .padresNovia
+        {
+            font-size: 50%
+        }
+        .invitacionPage2 .padres .padresNovio
+        {
+            font-size: 50%
+        }
+}
+
+
+@media screen and (max-width: 430px)
+{
+     .invitacionPage2 .padres .padresNovia
+        {
+            display: block;
+        }
+        .invitacionPage2 .padres .padresNovio
+        {
+            display: block;
+        }
+    .mensajePage h1
+    {
+        font-size: 120%;
+    }
+    .mensajePage h2
+    {
+        font-size: 120%;
+    }
+    .mensajePage h3
+    {
+        font-size: 280%;
+    }
+}
+
+@media screen and (max-width: 340px)
+{
+        .invitacionPage2 .padres .padresNovia
+        {
+            font-size: 45%
+        }
+        .invitacionPage2 .padres .padresNovio
+        {
+            font-size: 45%
+        }
+}

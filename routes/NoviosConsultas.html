@@ -1,0 +1,86 @@
+<div ng-controller="tableController">
+    <div class="input-group">
+        <input class="form-control" ng-model="searchText" placeholder="Buscar" type="search" ng-change="search()" /> 
+        <span class="input-group-addon">
+            <span class="glyphicon glyphicon-search"></span>
+        </span>
+    </div>
+    
+    <table class="table  table-hover data-table myTable">
+        <thead>
+            <tr>
+                <th class="confirmado"> 
+                    <a href="#" ng-click="sort('confirmado',$event)">Conf<span class="{{Header[0]}}"></span></a>
+                </th>
+                <th class="nombre">
+                    <a ng-click="sort('nombre')" href="#">Nombre<span class="{{Header[1]}}"></span></a> 
+                </th>
+                <th class="apellido">
+                    <a ng-click="sort('apellido')" href="#">Apellido<span class="{{Header[2]}}"></span></a> 
+                </th>
+                <th class="adultos_confirmados">
+                    <a ng-click="sort('adultos_confirmados')" href="#">Adultos<span class="{{Header[3]}}"></span></a> 
+                </th>
+                <th class="ninos_confirmados">
+                    <a ng-click="sort('ninos_confirmados')" href="#">Niños<span class="{{Header[4]}}"></span></a> 
+                </th>
+                <th class="relacion">
+                    <a ng-click="sort('relacion')" href="#">Relación<span class="{{Header[5]}}"></span></a> 
+                </th>
+                <th class="tipo_relacion">
+                    <a ng-click="sort('tipo_relacion')" href="#">Parentesco<span class="{{Header[6]}}"></span></a> 
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in ItemsByPage[currentPage] | orderBy:columnToOrder:reverse">
+                <td class="text-left">{{ item.confirmado }}</td>
+                <td class="text-left">{{ item.nombre }}</td>
+                <td class="text-left">{{ item.apellido }}</td>
+                <td class="text-left">{{ item.adultos_confirmados }}</td>
+                <td class="text-left">{{ item.ninos_confirmados }}</td>
+                <td class="text-left">{{ item.relacion }}</td>
+                <td class="text-left">{{ item.tipo_relacion }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <ul class="pagination pagination-sm">
+        <li ng-class="{active:0}">
+            <a href="#" ng-click="firstPage()">Primera</a>
+        </li>
+        <li ng-repeat="n in range(ItemsByPage.length)">
+            <a href="#" ng-click="setPage()" ng-bind="n+1">1</a>
+        </li>
+        <li>
+            <a href="#" ng-click="lastPage()">Ultima</a>
+        </li>
+    </ul>
+    <div class="row">
+        <div class="col-xs-3">
+            <input type="text" ng-model="newConfirmacion" class="form-control" placeholder="Conf.">
+        </div>
+        <div class="col-xs-3">
+            <input type="text" ng-model="newNombre" class="form-control" placeholder="Nombre">
+        </div>
+        <div class="col-xs-3">
+            <input type="text" ng-model="newApellido" class="form-control" placeholder="Apellido">
+        </div>
+        <div class="col-xs-3">
+            <input type="number" ng-model="newAdultos" class="form-control" min="0">
+        </div>
+        <div class="col-xs-3">
+            <input type="number" ng-model="newNinos" class="form-control" min="0">
+        </div>
+        <div class="col-xs-3">
+            <input type="text" ng-model="newRelacion" class="form-control" placeholder="Relacion">
+        </div>
+        <div class="col-xs-4">
+            <input type="text" ng-model="newParentesco" class="form-control" placeholder="Parentesco">
+        </div>
+        <div class="col-xs-1">
+            <button ng-click="add()" type="button" class="btn btn-primary">
+                <span class="glyphicon glyphicon-plus"></span>
+            </button>
+        </div>
+    </div>
+</div>

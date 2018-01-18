@@ -1,0 +1,33 @@
+<div class="animate" ng-switch-when=3>
+    <h1 class="datosAzul"><a href="https://www.instagram.com/explore/tags/bodajc27/" target="_blank">&#35;BodaJC27</a></h1>
+    <form id="validarData" ng-controller="formController">
+        <div class="contentShow">
+            <h1>Estimado <p class="color_color">{{nombre}}</p> <p class="color_color">{{postfijo}}</p>, es un gusto que haya decidido acompañarnos en este día especial. Por favor, ingrese los datos a continuación para realizar la confirmación:</h1>
+            <div class="field">
+                <input type="email" name="email" id="email" placeholder="Email" ng-model="email" value="{{email}}" onfocusout="validaMail()" />
+            </div>
+            <div class="field">
+                <input type="tel" name="phone" id="phone" placeholder="Telefono" ng-model="phone" value="{{phone}}" />
+            </div>
+            <div class="field" id="cant_adultos">
+                <label for="adultos">Adultos (Maximo {{maxA}} Adultos):</label>
+                <input type="number" name="adultos" id="adultos" min="0" max="{{maxA}}" value="{{maxAv}}" ng-model="adultos"/>
+            </div>   
+            <div class="field" id="cant_ninos" ng-style="myNinos">
+                <label >Niños (Maximo {{maxN}} Niños):</label>
+                <input type="number" name="ninos" id="ninos" min="0" max="{{maxN}}" value="{{maxNv}}" ng-model="ninos"/>
+            </div>                         
+            <!--<div class="field">
+                <label>Necesitas de informacion sobre hospedaje?</label>
+                <input type="radio" id="hotel_yes" name="robot" ng-model="hotel" value="1"  checked/><label for="hotel_yes">SI</label>
+                <input type="radio" id="hotel_no" name="robot" ng-model="hotel" value="0" /><label for="hotel_no">NO</label>
+            </div>-->
+            <div class="field">
+                <textarea name="message" id="message" placeholder="Deseas enviarnos algun mensaje?" rows="4" ng-model="mensaje"></textarea>
+            </div>
+        </div>
+        <ul class="actions4">
+            <li><a class="button" ng-click="setConfirmar()">Enviar</a></li>
+        </ul>
+    </form>
+</div>
